@@ -1,5 +1,5 @@
 git branch new-branch
-theme: jekyll-theme-moonphase
+theme: jekyll-theme-cayman
 title: POV your on my site:
 nav:
   - text: Movies
