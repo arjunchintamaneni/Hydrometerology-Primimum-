@@ -5,6 +5,6 @@ nav:
   - text: Movies
     url: /https://gmail.com/
   - text: RRR(This movie is 2.1 gb)
-    url: /https://www.youtube.com/
+    url: https://www.youtube.com
   - text: Like other things
-    url: /https://chat.openai.com/
+    url: https://chat.openai.com
