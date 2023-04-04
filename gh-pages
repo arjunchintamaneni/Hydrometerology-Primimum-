@@ -1,10 +1,10 @@
 git branch new-branch
-theme: jekyll-theme-cayman # or any other Jekyll theme you're using
-title: Your website title
+theme: jekyll-theme-Moonphase
+title: POV your on my site:
 nav:
   - text: Movies
-    url: 
+    url: /https://gmail.com/
   - text: RRR(This movie is 2.1 gb)
-    url: /
+    url: /https://www.youtube.com/
   - text: Like other things
-    url: /contact
+    url: /https://chat.openai.com/
