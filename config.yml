@@ -1,0 +1,9 @@
+theme: jekyll-theme-cayman # or any other Jekyll theme you're using
+title: DanTDM Proxies
+nav:
+  - text: Laffyete
+    url: //https:laffyete.industrialmill.com
+  - text: Atlanta
+    url: //https:atlanta.industrialmill.com/
+  - text: Contact
+    url: /contact
