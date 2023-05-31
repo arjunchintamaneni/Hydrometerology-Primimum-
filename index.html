@@ -1,43 +1,31 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>TheHub Corp.</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
-</head>
-<body>
-    <header>
-        <h1>Welecom to How to get a GUN</h1>
-    </header>
+<?php
 
-    <nav>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services(We offer the nearest Gun store)</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </nav>
+// Get the Base64-encoded URL from the query string
+$encodedUrl = $_GET['url'];
 
-    <main>
-        <section>
-            <h2>About Me</h2>
-            <p>God bless the lovley state of texas.</p>
-        </section>
+// Decode the URL from Base64
+$url = base64_decode($encodedUrl);
 
-        <section>
-            <h2>Services</h2>
-            <ul>
-                <li>Gun Finding</li>
-                <li>How to grab a gun</li>
-                <li>My story/li>
-            </ul>
-        </section>
-    </main>
+// Create a cURL handle
+$ch = curl_init();
 
-    <footer>
-        <p>&copy; 2023 My Website. All rights reserved.</p>
-    </footer>
+// Set the cURL options
+curl_setopt($ch, CURLOPT_URL, $url); // Set the URL to fetch
+curl_setopt($ch, CURLOPT_HEADER, false); // Exclude headers from the output
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); // Return the transfer as a string
 
-    <script src="script.js"></script>
-</body>
-</html>
+// Execute the cURL request
+$response = curl_exec($ch);
+
+// Get the content type of the response
+$contentType = curl_getinfo($ch, CURLINFO_CONTENT_TYPE);
+
+// Set the appropriate Content-Type header for the proxy response
+header("Content-Type: $contentType");
+
+// Output the response
+echo $response;
+
+// Close the cURL handle
+curl_close($ch);
+proxy.php?url=aHR0cDovL2V4YW1wbGUuY29t
